@@ -26,6 +26,8 @@ class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         
         tableView.dataSource = self
         tableView.delegate = self
+        
+        print(currentWeatherURL)
    
     }
     
