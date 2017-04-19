@@ -70,20 +70,28 @@ class CurrentWeather {
                 if let main = dict["main"] as? Dictionary<String, AnyObject> {
                     if let currentTemp = main["temp"] as? Double {
                         let kelvinToCelcius = (currentTemp - 273.15)
-                        self._currentTemp = kelvinToCelcius
+                        let roundedToCelcius = kelvinToCelcius.roundTo(places: 1)
+                        
+                        self._currentTemp = roundedToCelcius
                         print(self.currentTemp)
                     }
                 }
             }
-            
+            completed()
         }
-        completed()
         
     }
 
     
 }
 
+// rounds the json temp to 1 decimal point
+extension Double {
+    func roundTo(places: Int) -> Double {
+        let divisor = pow(10.0, Double(places))
+        return (self * divisor).rounded() / divisor
+    }
+}
 
 
 

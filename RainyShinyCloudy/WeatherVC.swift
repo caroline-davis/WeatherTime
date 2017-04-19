@@ -9,7 +9,6 @@
 import UIKit
 
 
-
 class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var dateLabel: UILabel!
@@ -30,6 +29,7 @@ class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         
         currentWeather.downloadWeatherDetails {
             // setup UI to download data
+            self.updateMainUI()
         }
    
     }
@@ -52,8 +52,15 @@ class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
 
 
+    func updateMainUI() {
+        dateLabel.text = currentWeather.date
+        currentTempLabel.text = String(currentWeather.currentTemp)
+        currentWeatherTypeLabel.text = currentWeather.weatherType
+        locationLabel.text = currentWeather.cityname
+        currentWeatherImage.image = UIImage(named: currentWeather.weatherType)
+        
+    }
     
-
 
 }
 
