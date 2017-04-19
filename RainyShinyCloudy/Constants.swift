@@ -9,10 +9,13 @@
 import Foundation
 
 
-let baseURL = "http://api.openweathermap.org/data/2.5/weather?"
-let lattitude =  "lat="
-let longitude = "&lon="
-let appID = "&appid="
-let apiKey = "2475af3a8d30f7e24471416d594d1681"
+let BASE_URL = "http://api.openweathermap.org/data/2.5/weather?"
+let LATTITUDE =  "lat="
+let LONGITUDE = "&lon="
+let APP_ID = "&appid="
+let APP_KEY = "2475af3a8d30f7e24471416d594d1681"
 
-let currentWeatherURL = "\(baseURL)\(lattitude)37.81\(longitude)144.9\(appID)\(apiKey)"
+// this will tell our function when we are finished downloading
+typealias DownloadComplete = () -> ()
+
+let CURRENT_WEATHER_URL = "\(BASE_URL)\(LATTITUDE)37.81\(LONGITUDE)144.9\(APP_ID)\(APP_KEY)"
