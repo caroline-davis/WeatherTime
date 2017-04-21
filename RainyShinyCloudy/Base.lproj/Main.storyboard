@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -79,31 +78,28 @@
                                             <frame key="frameInset" width="320" height="79.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jTo-o5-sxi">
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="50" id="GBk-mR-3fL"/>
-                                                        <constraint firstAttribute="width" constant="50" id="Wx1-8a-kIW"/>
-                                                    </constraints>
-                                                </imageView>
-                                                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0gs-3q-lOQ">
+                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="45" translatesAutoresizingMaskIntoConstraints="NO" id="0gs-3q-lOQ">
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" verticalHuggingPriority="249" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="pBO-bo-kQc">
                                                             <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Wednesday" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Btu-aS-3MV">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalCompressionResistancePriority="749" text="Wednesday" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Btu-aS-3MV">
                                                                     <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="18"/>
                                                                     <color key="textColor" red="0.18511618589743595" green="0.18511618589743595" blue="0.18511618589743595" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Cloudy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vdi-gk-yxQ">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Cloudy" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vdi-gk-yxQ">
                                                                     <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
                                                                     <color key="textColor" red="0.18511618589743595" green="0.18511618589743595" blue="0.18511618589743595" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                             </subviews>
+                                                            <constraints>
+                                                                <constraint firstItem="Vdi-gk-yxQ" firstAttribute="top" secondItem="Btu-aS-3MV" secondAttribute="bottom" id="x1o-cH-hyR"/>
+                                                            </constraints>
                                                         </stackView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="SWF-u5-EoR">
                                                             <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" 12.5°C" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bML-nx-EqI">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text=" 12.5°C" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bML-nx-EqI">
                                                                     <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="18"/>
                                                                     <color key="textColor" red="0.18511618589743595" green="0.18511618589743595" blue="0.18511618589743595" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <nil key="highlightedColor"/>
@@ -114,24 +110,23 @@
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                             </subviews>
+                                                            <constraints>
+                                                                <constraint firstItem="Mta-LZ-tZb" firstAttribute="top" secondItem="bML-nx-EqI" secondAttribute="bottom" id="XTF-Wa-IwX"/>
+                                                            </constraints>
                                                         </stackView>
                                                     </subviews>
-                                                    <constraints>
-                                                        <constraint firstAttribute="trailing" secondItem="SWF-u5-EoR" secondAttribute="trailing" id="gtJ-kF-Qid"/>
-                                                        <constraint firstItem="pBO-bo-kQc" firstAttribute="top" secondItem="0gs-3q-lOQ" secondAttribute="top" id="my6-va-QDr"/>
-                                                        <constraint firstItem="pBO-bo-kQc" firstAttribute="leading" secondItem="0gs-3q-lOQ" secondAttribute="leading" id="xGb-h6-wCx"/>
-                                                    </constraints>
                                                 </stackView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jTo-o5-sxi"/>
                                             </subviews>
                                             <color key="backgroundColor" red="0.88235294117647056" green="0.88235294117647056" blue="0.88235294117647056" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
-                                                <constraint firstItem="jTo-o5-sxi" firstAttribute="centerY" secondItem="XAp-Hp-yIW" secondAttribute="centerY" id="5d9-Xi-C8X"/>
-                                                <constraint firstItem="jTo-o5-sxi" firstAttribute="leading" secondItem="XAp-Hp-yIW" secondAttribute="leadingMargin" constant="8" id="Hgz-ju-dtG"/>
-                                                <constraint firstItem="0gs-3q-lOQ" firstAttribute="top" secondItem="XAp-Hp-yIW" secondAttribute="topMargin" constant="10" id="Rar-mZ-cRC"/>
-                                                <constraint firstItem="jTo-o5-sxi" firstAttribute="top" secondItem="XAp-Hp-yIW" secondAttribute="topMargin" constant="10" id="aTM-Rq-QfA"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="0gs-3q-lOQ" secondAttribute="trailing" constant="8" id="cPM-E5-MBC"/>
-                                                <constraint firstItem="0gs-3q-lOQ" firstAttribute="leading" secondItem="jTo-o5-sxi" secondAttribute="trailing" constant="8" id="lhF-sm-v5w"/>
-                                                <constraint firstItem="0gs-3q-lOQ" firstAttribute="centerY" secondItem="XAp-Hp-yIW" secondAttribute="centerY" id="tO9-5R-N11"/>
+                                                <constraint firstAttribute="bottom" secondItem="0gs-3q-lOQ" secondAttribute="bottom" constant="20" symbolic="YES" id="1Y5-dD-rQF"/>
+                                                <constraint firstItem="jTo-o5-sxi" firstAttribute="leading" secondItem="XAp-Hp-yIW" secondAttribute="leading" constant="8" id="9lz-gF-Owe"/>
+                                                <constraint firstAttribute="trailing" secondItem="0gs-3q-lOQ" secondAttribute="trailing" constant="20" symbolic="YES" id="Aow-lf-Nbv"/>
+                                                <constraint firstItem="jTo-o5-sxi" firstAttribute="centerY" secondItem="XAp-Hp-yIW" secondAttribute="centerY" id="CkS-Ca-T86"/>
+                                                <constraint firstItem="0gs-3q-lOQ" firstAttribute="top" secondItem="XAp-Hp-yIW" secondAttribute="top" constant="20" symbolic="YES" id="Rj1-EQ-sF7"/>
+                                                <constraint firstItem="0gs-3q-lOQ" firstAttribute="leading" secondItem="jTo-o5-sxi" secondAttribute="trailing" constant="8" symbolic="YES" id="dwy-Xp-Yfl"/>
+                                                <constraint firstAttribute="bottom" secondItem="jTo-o5-sxi" secondAttribute="bottom" constant="5.5" id="qxr-QE-A1a"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
