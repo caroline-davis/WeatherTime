@@ -18,6 +18,7 @@
 		F14509171EA5CABC0051CFF5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F14509151EA5CABC0051CFF5 /* LaunchScreen.storyboard */; };
 		F14509221EA5CABC0051CFF5 /* RainyShinyCloudyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F14509211EA5CABC0051CFF5 /* RainyShinyCloudyTests.swift */; };
 		F145092D1EA5CABC0051CFF5 /* RainyShinyCloudyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F145092C1EA5CABC0051CFF5 /* RainyShinyCloudyUITests.swift */; };
+		F1F365E61EA9C20A000385B6 /* WeatherCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F365E51EA9C20A000385B6 /* WeatherCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		F14509281EA5CABC0051CFF5 /* RainyShinyCloudyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RainyShinyCloudyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F145092C1EA5CABC0051CFF5 /* RainyShinyCloudyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RainyShinyCloudyUITests.swift; sourceTree = "<group>"; };
 		F145092E1EA5CABC0051CFF5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F1F365E51EA9C20A000385B6 /* WeatherCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +131,7 @@
 			children = (
 				F145090C1EA5CABB0051CFF5 /* AppDelegate.swift */,
 				F145090E1EA5CABB0051CFF5 /* WeatherVC.swift */,
+				F1F365E51EA9C20A000385B6 /* WeatherCell.swift */,
 				F14509101EA5CABC0051CFF5 /* Main.storyboard */,
 				F14509131EA5CABC0051CFF5 /* Assets.xcassets */,
 				F14509151EA5CABC0051CFF5 /* LaunchScreen.storyboard */,
@@ -348,6 +351,7 @@
 			files = (
 				F145090F1EA5CABB0051CFF5 /* WeatherVC.swift in Sources */,
 				F145090D1EA5CABB0051CFF5 /* AppDelegate.swift in Sources */,
+				F1F365E61EA9C20A000385B6 /* WeatherCell.swift in Sources */,
 				F136B73A1EA6FB77007D540F /* CurrentWeather.swift in Sources */,
 				F136B7381EA6F4E0007D540F /* Constants.swift in Sources */,
 				F136B73C1EA74761007D540F /* Forecast.swift in Sources */,
