@@ -31,12 +31,12 @@ class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         tableView.delegate = self
         
         currentWeather = CurrentWeather()
-        forecast = Forecast()
-        
         
         currentWeather.downloadWeatherDetails {
+            self.downloadForecastWeatherData {
             // setup UI to download data
             self.updateMainUI()
+            }
         }
    
     }
@@ -48,14 +48,15 @@ class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             if let dict = result.value as? Dictionary<String, AnyObject> {
                 if let list = dict["list"] as? [Dictionary<String, AnyObject>] {
                     for object in list {
+                        let forecast = Forecast(weatherDict: object)
+                        self.forecasts.append(forecast)
                         
-                        // TO DO!!!
-                     //   let forecast = Forecast(weatherDict: object)
-                      //  self.forecasts.append(forecast)
+                        print(object)
                     }
                     
                 }
             }
+            completed()
         }
 
     }
