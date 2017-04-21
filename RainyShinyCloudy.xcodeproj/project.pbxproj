@@ -19,6 +19,7 @@
 		F14509221EA5CABC0051CFF5 /* RainyShinyCloudyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F14509211EA5CABC0051CFF5 /* RainyShinyCloudyTests.swift */; };
 		F145092D1EA5CABC0051CFF5 /* RainyShinyCloudyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F145092C1EA5CABC0051CFF5 /* RainyShinyCloudyUITests.swift */; };
 		F1F365E61EA9C20A000385B6 /* WeatherCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F365E51EA9C20A000385B6 /* WeatherCell.swift */; };
+		F1F365E81EA9D277000385B6 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F365E71EA9D277000385B6 /* Location.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		F145092C1EA5CABC0051CFF5 /* RainyShinyCloudyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RainyShinyCloudyUITests.swift; sourceTree = "<group>"; };
 		F145092E1EA5CABC0051CFF5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F1F365E51EA9C20A000385B6 /* WeatherCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherCell.swift; sourceTree = "<group>"; };
+		F1F365E71EA9D277000385B6 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				F145090C1EA5CABB0051CFF5 /* AppDelegate.swift */,
+				F1F365E71EA9D277000385B6 /* Location.swift */,
 				F145090E1EA5CABB0051CFF5 /* WeatherVC.swift */,
 				F1F365E51EA9C20A000385B6 /* WeatherCell.swift */,
 				F14509101EA5CABC0051CFF5 /* Main.storyboard */,
@@ -355,6 +358,7 @@
 				F136B73A1EA6FB77007D540F /* CurrentWeather.swift in Sources */,
 				F136B7381EA6F4E0007D540F /* Constants.swift in Sources */,
 				F136B73C1EA74761007D540F /* Forecast.swift in Sources */,
+				F1F365E81EA9D277000385B6 /* Location.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

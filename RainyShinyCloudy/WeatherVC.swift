@@ -8,9 +8,10 @@
 
 import UIKit
 import Alamofire
+import CoreLocation
 
 
-class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource, CLLocationManagerDelegate {
 
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var currentTempLabel: UILabel!
@@ -18,6 +19,9 @@ class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var currentWeatherImage: UIImageView!
     @IBOutlet weak var currentWeatherTypeLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
+    
+    let locationManager = CLLocationManager()
+    var currentLocation: CLLocation!
     
     var currentWeather: CurrentWeather!
     var forecast: Forecast!
@@ -30,16 +34,55 @@ class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         tableView.dataSource = self
         tableView.delegate = self
         
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.startMonitoringSignificantLocationChanges()
+        
         currentWeather = CurrentWeather()
         
-        currentWeather.downloadWeatherDetails {
-            self.downloadForecastWeatherData {
-            // setup UI to download data
-            self.updateMainUI()
-            }
-        }
+//        currentWeather.downloadWeatherDetails {
+//            self.downloadForecastWeatherData {
+//            // setup UI to download data
+//            self.updateMainUI()
+//            }
+//        }
    
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        locationAuthStatus()
+        
+        
+    }
+    
+    
+    // func for getting the location of the user + add part to PList
+    func locationAuthStatus() {
+        if CLLocationManager.authorizationStatus() == .authorizedWhenInUse {
+            currentLocation = locationManager.location
+            Location.sharedInstance.latitude = currentLocation.coordinate.latitude
+            Location.sharedInstance.longitude = currentLocation.coordinate.longitude
+            currentWeather.downloadWeatherDetails {
+                self.downloadForecastWeatherData {
+                    // setup UI to download data
+                    self.updateMainUI()
+                }
+            } 
+
+           
+            
+        } else {
+            locationManager.requestWhenInUseAuthorization()
+            // runs func again as now authorised
+            locationAuthStatus()
+        }
+        
+    }
+    
+    
+    
     // for the forecast of the next 6 days of weather for tableview
     func downloadForecastWeatherData(completed: @escaping DownloadComplete) {
         Alamofire.request(FORECAST_URL).responseJSON { response in
